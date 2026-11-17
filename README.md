@@ -1,29 +1,28 @@
 # 💼 Anish Kumar M - Portfolio Website
 
-A professional, fully-responsive portfolio website built with **React**, **HTML5**, **CSS3**, and **JavaScript**. Showcase your skills, projects, resume, and contact information with smooth animations and modern design.
+A responsive portfolio website built with **React**, **HTML5**, **CSS3**, and **JavaScript**. It presents selected projects, skills, a resume, and contact information in a polished, app-inspired layout.
 
 ## 🚀 Features
 
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
-- **Smooth Animations** - Professional entrance animations, hover effects, and interactive elements
-- **Profile Photo Upload** - Upload and save your profile photo with base64 conversion
-- **Skills Section** - Display your technical skills with animated underlines and hover effects
+- **Responsive Design** - Adapts to desktop, tablet, and mobile screens
+- **Accessible Navigation** - Sticky section navigation, keyboard focus states, and reduced-motion support
+- **Skills Section** - A concise overview of technical skills
+- **Professional Experience** - Current Process Associate role and transferable workplace skills
+- **Certificates** - Completed Debt Recovery Agent (DRA) certificate and key learning areas
 - **Projects Showcase** - Link to your GitHub repositories with project descriptions
 - **Resume Integration** - Download and view your resume directly from the portfolio
-- **Contact Information** - Email, phone, location with clickable links
+- **Contact Information** - Clickable email and phone details, plus location
 - **Social Media Links** - Connect with LinkedIn, GitHub, and other platforms
-- **Modern UI** - Dark theme with orange accents and glassmorphism effects
-- **Photo Animations** - Bouncing effect, glowing aura, spinning border, and zoom pulse animations
+- **Modern UI** - A charcoal portfolio with warm-gold accents, a black hero, and a responsive two-column layout
+- **Mobile Navigation** - An accessible collapsible menu designed for small screens
 
 ## 🛠 Technologies Used
 
 - **React 18** - UI library (via CDN)
 - **Babel Standalone** - JSX transpilation (via CDN)
 - **HTML5** - Document structure
-- **CSS3** - Styling and animations
-- **JavaScript (ES6+)** - Interactivity and state management
-- **FileReader API** - Image to base64 conversion
-- **Clipboard API** - Copy functionality
+- **CSS3** - Responsive layout, visual styling, and interaction states
+- **JavaScript (ES6+)** - Portfolio content and rendering
 
 ## 📋 Project Structure
 
@@ -31,9 +30,9 @@ A professional, fully-responsive portfolio website built with **React**, **HTML5
 portfolio/
 ├── index.html          # Main HTML file
 ├── app.js             # React component & logic
-├── style.css          # Styling and animations
-├── resume.pdf         # Your resume (add your resume file)
-├── my profile pic.jpg # Profile photo (optional)
+├── style.css          # Responsive layout and visual styles
+├── resume.pdf         # Resume document
+├── my profile pic.jpg # Profile photo
 └── README.md          # This file
 ```
 
@@ -42,11 +41,13 @@ portfolio/
 1. **Navigation Bar** - Sticky navbar with links to all sections
 2. **Hero Section** - Welcome message with CTA button and profile image
 3. **About Me** - Detailed information about you and your career goals
-4. **Technical Skills** - List of your technical skills with animations
-5. **Featured Projects** - Grid showcasing your GitHub projects
-6. **Resume** - Download and view your resume
-7. **Contact** - Contact information and social media links
-8. **Footer** - Copyright information
+4. **Professional Experience** - Current role and skills developed at work
+5. **Technical Skills** - Technical and professional skills grouped by category
+6. **Certificates** - Completed training and key learning areas
+7. **Featured Projects** - Grid showcasing your GitHub projects
+8. **Resume** - Download and view your resume
+9. **Contact** - Contact information and social media links
+10. **Footer** - Copyright information
 
 ## 🚀 How to Use
 
@@ -63,48 +64,23 @@ Simply open `index.html` in your web browser:
 
 ### 3. Customize Content
 Edit `app.js` to update:
-- Your full name (line 54)
-- Profile photo (line 4)
-- Projects array (lines 12-15)
-- Skills list (line 19)
-- Contact information (lines 21-24)
-- Social media links (lines 26-29)
+- Your name and introduction
+- Your current role, training, strengths, and career interests
+- The profile image filename (`my profile pic.jpg`)
+- The projects array
+- The `skillGroups` categories and skills
+- Contact information and social media links
 
 ### 4. Add Your Resume
-- Place your resume file in the portfolio folder
-- Update the filename in line 171 if needed
+- Place your resume PDF in the portfolio folder as `resume.pdf`, or update the resume links in `app.js`.
 
 ### 5. Add Profile Photo
-- Click **+ Upload Photo** on the portfolio
-- Or update the filename on line 4 of `app.js`
-
-## 📸 Adding Your Profile Photo
-
-Two methods:
-
-**Method 1: Upload via Browser**
-1. Open portfolio in browser
-2. Click **+ Upload Photo** button
-3. Select your image
-4. Click **📋 Copy Code to Save** to copy base64
-5. Paste it in line 4 of `app.js`
-
-**Method 2: Direct File Path**
-Replace line 4 in `app.js`:
-```javascript
-const [profilePhoto, setProfilePhoto] = useState('my profile pic.jpg');
-```
+Replace `my profile pic.jpg` in `app.js` with the relative path to your image.
 
 ## 📄 Customization Guide
 
-### Update Your Name
-In `app.js` line 54:
-```javascript
-<div className="logo">💼 Your Name Here</div>
-```
-
 ### Update Projects
-In `app.js` lines 12-15:
+Update the `projects` array in `app.js`:
 ```javascript
 const projects = [
   { id: 1, name: 'Project Name', description: 'Description', url: 'https://github.com/your-username/repo' },
@@ -113,24 +89,16 @@ const projects = [
 ```
 
 ### Update Skills
-In `app.js` line 19:
+Update the `skillGroups` array in `app.js`:
 ```javascript
-const skills = ['HTML', 'CSS', 'JavaScript', 'REACT', 'Java', 'Your Skill'];
+const skillGroups = [
+  { category: 'Programming', skills: ['Java', 'JavaScript (Basics)'] },
+  { category: 'Frontend Development', skills: ['HTML5', 'CSS3', 'Responsive Web Design'] },
+];
 ```
 
 ### Change Color Scheme
-In `style.css`, search for `#ff4500` (orange) and `#0a0a0a` (dark background) to customize colors.
-
-## 🎨 Animation Features
-
-- **Fade In** - Elements fade in on page load
-- **Slide In** - Sections slide in from different directions
-- **Bounce** - Profile photo bounces continuously
-- **Glow** - Pulsing orange glow effects
-- **Rotate** - Spinning border and icons
-- **Zoom Pulse** - Subtle zoom on hover
-- **Shimmer** - Shimmering text effects
-- **Float** - Floating placeholder icons
+Edit the CSS custom properties at the top of `style.css` to change the page, text, surface, and accent colors.
 
 ## 🔗 Deployment
 
